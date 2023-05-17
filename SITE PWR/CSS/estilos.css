@@ -1,0 +1,236 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/022/357/326/large/mikhail-selnihin-full-day-out-light-x4.jpg?1575137410');
+    background-size: auto 100vh;
+    font-family: 'Oswald', sans-serif;
+    height: 100vh 
+  }
+
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px
+    }
+  }
+
+  
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px
+    }
+  }
+
+  header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    background-color: #9cb0ff;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+   }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+
+  .menu a{
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1.5s, color 2s; 
+  }
+  
+
+  .menu a:hover {
+    background-color: #e4fa9b; 
+    color: black;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: Times;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+   }
+
+   .titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+
+    animation: linear 2s animacaoTitulo forwards;
+   }
+
+   @keyframes animacaoTitulo {
+    100% {
+      transform: scale(1) translateY(0vh);
+    opacity: 1;
+    }
+   }
+  
+  .site-title {
+    text-align: center;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .site-title {
+    font-size: 3em;
+  }
+  
+  .site-subtitle {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .sobre h2,
+  .contato h2,
+  h2 {
+    margin-bottom: 1em;
+    font-size: xx-large;
+}
+  .sobre,
+  .contato,
+  .experiencias {
+    background: #9cb0ff;
+    padding: 2em;
+    min-height: 55vh;
+  }
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px
+  }
+}
+
+
+  .sobre p {
+    color: black;
+    text-indent: 2em; 
+    margin-bottom: 1.5em;
+    text-align: justify;
+  }
+
+  .sobre a {
+    text-decoration: underline;
+  }
+
+  .sobre a:hover {
+    color: black;
+  }
+
+  .sobre .avatar img {
+    border-radius: 50%;
+    float: right;
+  }
+
+
+  .sobre .avatar {
+    float: right; 
+    margin-left: 2em;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 375px) {
+    .sobre .avatar img {
+      float: right;
+      border-radius: 80%;
+      margin-left: 2em;
+    }
+  }  
+
+  .experiencias .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+  @media (min-width: 560px) {
+    .experiencias .grid {
+      grid-template-columns: 200px 200px 200px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .experiencias .grid {
+      grid-template-columns: repeat (3, 260px);
+      justify-content: center;
+      align-content: center;
+    }
+  }
+
+  .experiencias figure {
+    text-align: center;
+  }
+
+  .img-experiencias {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    transition: transform 1s;
+  }
+
+
+  .flip-card {
+    perspective: 500px;
+  }
+
+  .card {
+    position: relative; 
+    transform-style: preserve-3d;
+    transition: transform 3s;
+  }
+
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
+    transition: transform 1.5s;
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    text-align: center;
+    text-justify: auto;
+    backface-visibility: hidden;
+  }
+
+  .card-back {
+    background-color: #b4bbd8;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    transform: rotateY(180deg);
+  }
+
+  .contato .icons{
+    text-align: center;
+  }
+
+  .contato a {
+    color: rgb(65, 62, 62);
+    font-size: 4em;
+  }
+
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px plum;
+  }
